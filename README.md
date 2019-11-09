@@ -1,8 +1,8 @@
-# Multithreading-Single-Lane-Bridge-C-
+# Multithreading Single Lane Bridge (C)
 
  Simulation of crossing a single lane bridge, using threads.
 
-# Info:
+# Code Information:
 
 •The code were created using "Code :: Blocks IDE" and I used "GNU Compiler for C / C ++".
 •Libraries: <stdio.h>, <stdlib.h>, <unistd.h>, <pthread.h>(for the creation and management of threads.)
