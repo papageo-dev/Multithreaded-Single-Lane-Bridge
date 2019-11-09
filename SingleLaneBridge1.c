@@ -87,7 +87,7 @@ int main(int argc, char *argv[])
         pthread_join(threadDataCar[i].tID, NULL);
 	}
 
-    /*Close Program*/
+    /*Close program*/
 	exit(0);
 }
 
