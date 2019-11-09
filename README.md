@@ -5,11 +5,7 @@
 # Info:
 
 •The code were created using "Code :: Blocks IDE" and I used "GNU Compiler for C / C ++".
-•Libraries:
- <stdio.h>
- <stdlib.h>
- <unistd.h>
- <pthread.h>, for the creation and management of threads
+•Libraries: <stdio.h>, <stdlib.h>, <unistd.h>, <pthread.h>(for the creation and management of threads.)
 
 # General description:
 
@@ -35,7 +31,7 @@ This is because I do not use any lock variables and so other threads can change 
 from the 1st thread terminates and collisions occur.
 Conflicts occur more frequently as the number of threads increases.
 
-•Scenario 2: Safe transit but without justice. Whoever catches up, passes by.
+•Scenario 2: Safe transit, but without justice. (Whoever catches up, passes by.)
 
 The threads(red and blue cars) reach the ends of the bridge at different times or at the same time, but
 cross the bridge at different times. After one finishes its route, the next one "enters" and conflicts are avoided.
@@ -53,7 +49,7 @@ red and blue cars is observed, even if the cars reach the edge of the bridge at 
 •Scenario 4: Safe crossing with rotation and adaptation.
 
 Strict rotation applies, but for adaptation I used an If condition, where if it is the order of the blue cars,
-but the number of red (nRed) cars arriving on the bridge is greater than the total of nBlue, then break of the loop and passing a red car.
+but the number of red(nRed) cars arriving on the bridge is greater than the total of blue(nBlue) cars, then break of the loop and passing a red car.
 Similarly, the same is true of the other thread group.
 This scenario works best with a larger number of threads.
 
