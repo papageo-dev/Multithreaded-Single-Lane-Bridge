@@ -38,7 +38,7 @@ static void *redCarFunc(void *vargp)
 	return NULL;
 }
 
-/*SYNARTHSH: MPLE AYTOKINHTA STHN GEFYRA.*/
+/*Function: Blue cars on the bridge*/
 static void *blueCarFunc(void *vargp)
 {
     thread_data *data = (thread_data *)vargp; /*Pointer to struct: 'thread_data'*/
@@ -95,7 +95,8 @@ int main(int argc, char *argv[])
 		if (threadDataCar[i].tID%2!=0) {
             /*To avoid collisions, if a red car arrives and there is a blue car on the bridge(nBlue>0),
             then the red waits(nRed++) for a time equal to the required crossing time(delay).
-            For strict rotation, if the waiting blue cars are above 0 (wBlue>0) and is their turn(bCarTurn == TRUE), then a blue car crosses the bridge.*/
+            For strict rotation, if the waiting blue cars are above 0 (wBlue>0) and is their turn(bCarTurn == TRUE),
+            then a blue car crosses the bridge.*/
             while (nBlue>0 || (wBlue>0 && bCarTurn)){
                 wRed--;
                 nRed++;
@@ -109,7 +110,8 @@ int main(int argc, char *argv[])
 		else {
             /*To avoid collisions, if a blue car arrives and there is a red car on the bridge(nRed>0),
             then the blue waits(nBlue++) for a time equal to the required crossing time(delay).
-            For strict rotation, if the waiting red cars are above 0 (wRed>0) and is their turn(bCarTurn == FALSE), then a red car crosses the bridge.*/
+            For strict rotation, if the waiting red cars are above 0 (wRed>0) and is their turn(bCarTurn == FALSE),
+            then a red car crosses the bridge.*/
             while (nRed>0 || (wRed>0 && !bCarTurn)){
             wBlue--;
             nBlue++;
@@ -125,7 +127,7 @@ int main(int argc, char *argv[])
         pthread_create(&threadDataCar[i].tID, NULL, thread_func, &threadDataCar[i]);
 	}
 
-	/*Create thread and call the correct function*/
+	/*Wait all threads to end*/
 	for (i=0; i<threadsNum; i++){
         pthread_join(threadDataCar[i].tID, NULL);
 	}
