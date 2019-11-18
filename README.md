@@ -2,12 +2,12 @@
 
  Simulation of crossing a single lane bridge, using threads.
 
-# Code Information:
+# Code Information
 
 The code were created using "Code :: Blocks IDE" and I used "GNU Compiler for C / C ++".              
 Libraries: <stdio.h>, <stdlib.h>, <unistd.h>, <pthread.h>(for the creation and management of threads.)
 
-# General description:
+# General Description:
 
 Every car is a thread. Red cars reach one side of the bridge, blue ones on the other.
 The frequency of cars arriving, as well as the total number of cars arriving on each side, are parameters of the simulation.
@@ -15,7 +15,7 @@ The frequency of cars arriving, as well as the total number of cars arriving on 
 The bridge is the shared memory area we need to manage. The time it takes to cross a car, as well as how many cars on the same side
 can pass each time are also parameters of the simulation.
 
-# Analysis:
+# Analysis
 
 Notes:
 1) In each scenario, the number of threads can be increased by the constant(#define) "threadsNum".
