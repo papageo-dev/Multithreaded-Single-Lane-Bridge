@@ -7,7 +7,7 @@
 The code were created using "Code :: Blocks IDE" and I used "GNU Compiler for C / C ++".              
 Libraries: <stdio.h>, <stdlib.h>, <unistd.h>, <pthread.h>(for the creation and management of threads.)
 
-# General Description:
+# General Description
 
 Every car is a thread. Red cars reach one side of the bridge, blue ones on the other.
 The frequency of cars arriving, as well as the total number of cars arriving on each side, are parameters of the simulation.
